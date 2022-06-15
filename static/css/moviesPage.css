@@ -1,0 +1,74 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.movieCreate {
+    border-bottom-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieCreate form {
+    display: flex;
+    align-items: center;
+}
+
+.inputTextField { 
+    margin: 1rem;
+}
+
+
+.movieSort {
+    display: flex;
+    border-bottom-style: solid;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieSort form {
+    display: flex;
+    align-items: center;
+}
+
+.movieBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieItem {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 1rem;
+}
+
+.header { 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

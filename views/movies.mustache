@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/moviesPage.css">
+    </head>
+    <body>
+        <div class="header">
+
+        </div>
+        <div class="navButtons">
+                <div class="movieCreate">
+                    <h4>Create New Movie</h4>
+                    <form action="/movies/create" method="post">
+                        <div class="inputTextField">
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="inputTextField">
+                            <span>Genre</span>
+                            <input type="text" name="genre">
+                        </div>
+                        <div class="inputTextField">
+                            <span>Description</span>
+                            <input type="text" name="description">
+                        </div>
+                        <div class="inputTextField">
+                            <span>Image URL</span>
+                            <input type="text" name="image">
+                        </div>
+                        <button>Submit Movie</button>
+                    </form>
+                </div>
+                <div class="movieSort">
+                    <h4>Sort movies by genre</h4>
+                    <form action="/movies/genre/">
+                        <div class="inputTextField">
+                            <span>Genre</span>
+                            <input type="text" name="genre">
+                        </div>
+                        <button>Search</button>
+                    </form>
+                    <form action="/movies">
+                        <button>Clear Filters</button>
+                    </form>
+                </div>
+                
+                
+                
+        </div>
+        <div class="movieBox">
+        <h3>Current Movies</h3>
+            <ul class="movieList">
+                {{#movies}}
+                <li class="movieItem">   
+                    <h3>{{name}}</h3>
+                    <span>Genre: <form action="/movies/genre/{{genre}}">
+                            <button>{{genre}}</button>
+                        </form></span>                    
+                    <div class="actionButtons">
+                        <form action="/movies/{{id}}">
+                            <button>Details</button>
+                        </form>
+                        <form action="/movies/delete" method="post">
+                            <button name="id" value="{{id}}">Delete Movie</button>
+                        </form>
+                    </div>
+                    
+                </li>
+                {{/movies}}
+            </ul>
+        </div>
+        <script src=""></script>
+    </body>
+</html>
