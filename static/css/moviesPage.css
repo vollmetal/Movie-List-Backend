@@ -60,11 +60,13 @@ body {
     border-radius: 3px;
     border-style: solid;
     padding: 1rem;
+    align-items: center;
 }
 
 .header { 
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .movieDetails {

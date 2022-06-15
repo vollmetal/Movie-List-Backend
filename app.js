@@ -14,8 +14,8 @@ app.use(express.urlencoded())
 app.use(express.json())
 
 app.use(express.static('static'))
-app.use('movies/',express.static('static'))
-app.use('movies/genre/',express.static('static'))
+app.use('/movies',express.static('static'))
+app.use('/movies/genre',express.static('static'))
 
 app.use('/', mainPageRouter)
 
